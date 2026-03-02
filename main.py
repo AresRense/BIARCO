@@ -9,5 +9,4 @@ with sqlite3.connect ("mainai.db") as db:
     c.execute("""--sql
     CREATE TABLE IF NOT EXISTS posts (main TEXT, tags TEXT)""")
 
-    c.execute("""--sql 
-    INSERT INTO posts VALUES (?, ?), (processed_main, processed_tags)""")
+    c.execute("INSERT INTO posts VALUES (?, ?)", processed_main, processed_tags)
